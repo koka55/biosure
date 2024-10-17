@@ -2,5 +2,3 @@ raw_data/
 .python-version
 
 data/extracted_features/
-
-data/data_preprocessing.ipynb
