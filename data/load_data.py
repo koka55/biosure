@@ -1,3 +1,6 @@
+from params import *
+import os
+
 '''
 Loading Data (from csv files)
 '''
@@ -5,9 +8,11 @@ Loading Data (from csv files)
 import pandas as pd
 from glob import glob
 
-def data_load(folder_path):
+def data_load():
     # Get a list of all CSV files in a directory
-    csv_files = glob(folder_path, '*.csv')
+    data_folder = 'extracted_features'
+    data_folder_path = os.path.join(LOCAL_DATA_PATH, data_folder)
+    csv_files = glob(data_folder_path, '*.csv')
 
     # Create an empty dataframe to store the combined data
     data = pd.DataFrame()
